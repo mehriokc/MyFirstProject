@@ -1,0 +1,3 @@
+select id, name, phone, accountnumber from Account
+where Phone !=NULL
+    and AccountNumber !=NULL

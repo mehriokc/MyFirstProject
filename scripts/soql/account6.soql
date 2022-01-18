@@ -1,0 +1,8 @@
+select id, name, phone, accountnumber, website from Account
+where AccountNumber !=NULL
+And (Phone  != null OR Website != NULL)
+
+
+//fetch all account where
+//account is not null and active is yes
+//include active field in results

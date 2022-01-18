@@ -1,0 +1,4 @@
+SELECT id, name FROM Account WHERE
+Name like '%oil%' 
+
+SELECT id, Name, phone accountnumber from Account where Phone != NULL 

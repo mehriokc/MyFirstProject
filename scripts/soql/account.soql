@@ -1,0 +1,10 @@
+// Use .soql files to store SOQL queries.
+// You can execute queries in VS Code by selecting the
+//     query text and running the command:
+//     SFDX: Execute SOQL Query with Currently Selected Text
+
+select id, name, FirstName, LastName, phone from contact
+
+select id, name, accountnumber, phone, Active__c from accountnumber
+
+SElect id, name, accountnumber, phone, Active__c  from account where name = 'sForce'

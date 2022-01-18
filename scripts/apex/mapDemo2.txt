@@ -1,0 +1,30 @@
+// Group 1 list
+list<string> listCandidatesG1 = new list<string>();
+integer x = 56;
+listCandidatesG1.add('Babur');
+listCandidatesG1.add('Zhananat');
+listCandidatesG1.add('Dovran');
+// group 2 
+list<string> listCandidatesG2 = new list<string>();
+listCandidatesG2.add('Sadi');
+listCandidatesG2.add('Betul');
+listCandidatesG2.add('Dovlet');
+
+//creating map of string, list<string>
+map<string, list<string>> mapGroupsCandidate = new map<string, list<string>>();
+mapGroupsCandidate.put('Group1', listCandidatesG1); //right?
+mapGroupsCandidate.put('Group2', listCandidatesG2);
+system.debug('map of group name and its candidates' + mapGroupscandidate); 
+
+//get value of Group2.
+list<string> group2Value = mapGroupsCandidate.get('Group2');
+system.debug('group 2 candidatesn ' + group2Value);
+
+//key set of map
+set<string> setOfGroupNames = mapGroupsCandidate.keyset();
+
+//values map
+list<list<string>> listOfCandidatesNameList = mapGroupsCandidate.values();
+system.debug('group name set ' + setOfGroupNames);
+system.debug('listOfCandidatenameList = ' + listOfCandidatesNameList);
+

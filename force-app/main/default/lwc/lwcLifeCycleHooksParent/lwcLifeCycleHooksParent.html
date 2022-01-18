@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Hooks in LWC">
+        Hello there!
+        <br/>
+        <lightning-input
+            label="Hide/Show child component"
+            variant="brand"
+            type="checkbox"
+            onchange={handleShowHideChild}
+            checked="true"
+        ></lightning-input>
+        <template if:true={showChild}>
+            <c-lwc-lifecycle-hooks 
+                public-property="This is value passed from Parent in publicProperty"
+            ></c-lwc-lifecycle-hooks>
+        </template>
+    </lightning-card>
+</template>

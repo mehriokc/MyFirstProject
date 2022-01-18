@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Imperative Apex Call">      
+        <lightning-layout horizontal-align="spread">
+            <lightning-layout-item padding="around-medium">
+                <lightning-button label="Salesforce Show Leads" onclick={onShowClickSalesforce}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-medium">
+                <lightning-button label="Hide Leads" onclick={onHideClickSalesforce}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout multiple-rows="true">
+            <template if:true={showLeads}>
+                <template for:each={leadsList} for:item="lead">
+                    <lightning-layout-item size="12" key={lead.Id}>
+                        <div class="slds-text-align_center">
+                            {lead.Email}
+                        </div>
+                    </lightning-layout-item>
+                </template>
+            </template>
+        </lightning-layout>
+    </lightning-card>
+ </template>

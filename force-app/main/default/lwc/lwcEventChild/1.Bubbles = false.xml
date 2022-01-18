@@ -1,0 +1,53 @@
+1.Bubbles = false
+It DOESN't go up the hierarchy NOR DOES it cross SHADOW boundary
+<!-- parent component starts below --> This is reference example for bubbles Bubbles and Composed in LWC
+<div>
+    <!-- Event is not received -->
+    <div>
+    <!-- child component starts below == SHADOW BOUNDARY  -->
+        <div>
+            <!-- Event is not received -->
+            <div>
+                <!-- event fired here -->
+            </div>
+        </div>
+        <!-- child component ends above -->
+    </div>
+</div>
+<!-- parent component ends above -->
+--------------------------------------------------------------------------------
+2.Bubbles = true && composed = false
+It WILL go up the hierarchy but does not cross SHADOW boundary
+<!-- parent component starts below -->
+<div>
+    <!-- Event is not received -->
+    <div>
+    <!-- child component starts below == SHADOW BOUNDARY -->
+        <div>
+            <!-- Event is received -->
+            <div>
+                <!-- event fired here -->
+            </div>
+        </div>
+        <!-- child component ends above -->
+    </div>
+</div>
+<!-- parent component ends above -->
+--------------------------------------------------------------------------------
+3.Bubbles = true && composed = true
+It WILL go up the hierarchy but does not cross SHADOW boundary
+<!-- parent component starts below -->
+<div>
+    <!-- Event is received -->
+    <div>
+    <!-- child component starts below == SHADOW BOUNDARY -->
+        <div>
+            <!-- Event is received -->
+            <div>
+                <!-- event fired here -->
+            </div>
+        </div>
+        <!-- child component ends above -->
+    </div>
+</div>
+<!-- parent component ends above -->

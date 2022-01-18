@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="LWC Subscriber">
+         <lightning-button 
+             label="Subscribe"
+             onclick={handleSubscribe}
+             variant="neutral"
+         ></lightning-button>
+         <br/>
+         <lightning-button 
+             label="Unsubscribe"
+             onclick={handleUnsubscribe}
+             variant="brand"
+         ></lightning-button>
+         <br/>
+         {movieData}
+    </lightning-card>
+ </template>

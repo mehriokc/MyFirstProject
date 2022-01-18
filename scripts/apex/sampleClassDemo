@@ -1,0 +1,3 @@
+//Create object of the class
+SampleClass2 sc2 = new SampleClass2();
+sc2.sampleMethod();
